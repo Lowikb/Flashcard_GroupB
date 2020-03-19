@@ -1,8 +1,11 @@
 package com.lowik.flashcard_groupb;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
                     mMediaPlayer.seekTo(mCurrentVideoPosition);
                     mMediaPlayer.start();
                 }
+            }
+        });
+        Button aboutButton = findViewById(R.id.aboutButton);
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent);
             }
         });
     }
