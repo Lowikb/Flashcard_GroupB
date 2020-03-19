@@ -42,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String versionName = BuildConfig.VERSION_NAME;
                 Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                intent.putExtra("versionName", versionName);
                 startActivity(intent);
             }
         });
