@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        videoBG = (VideoView) findViewById(R.id.videoView);
+        videoBG = findViewById(R.id.videoView);
 
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.groupbrally);
 
