@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         videoBG = findViewById(R.id.videoView);
-
+        // get the video emplacement
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.groupbrally);
 
         videoBG.setVideoURI(uri);
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // get version of the app from BuildConfig
                 String versionName = BuildConfig.VERSION_NAME;
                 Intent intent = new Intent(MainActivity.this, AboutActivity.class);
                 intent.putExtra("versionName", versionName);
