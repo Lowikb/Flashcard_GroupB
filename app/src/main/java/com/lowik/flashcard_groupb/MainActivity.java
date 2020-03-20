@@ -93,20 +93,19 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+    // pause video when we're on another screen
     @Override
     protected void onPause() {
         super.onPause();
         mCurrentVideoPosition = mMediaPlayer.getCurrentPosition();
         videoBG.pause();
     }
-
+    // resume video when going back into the screen
     @Override
     protected void onResume() {
         super.onResume();
         videoBG.start();
     }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
