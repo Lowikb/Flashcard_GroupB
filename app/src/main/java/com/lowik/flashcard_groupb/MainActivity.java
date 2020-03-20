@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        final Button questionnaryButton = findViewById(R.id.questionnaryButton);
+        Button questionnaryButton = findViewById(R.id.questionnaryButton);
         questionnaryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +69,18 @@ public class MainActivity extends AppCompatActivity {
                             case 0: // Easy
                             case 1: // Medium
                             case 2: // Hard
+                        }
+                        if (which == 0) {
+                            Intent intent = new Intent(MainActivity.this, QuestionActivity.class);
+                            startActivity(intent);
+                        }
+                        if (which == 1) {
+                            Intent intent = new Intent(MainActivity.this, QuestionActivity.class);
+                            startActivity(intent);
+                        }
+                        else {
+                            Intent intent = new Intent(MainActivity.this, QuestionActivity.class);
+                            startActivity(intent);
                         }
                     }
                 });
